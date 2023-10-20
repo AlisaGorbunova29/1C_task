@@ -139,7 +139,7 @@ int Bypass (Cell now_cell, long long time, int direction, int A, int B) {
                     }
                 }
                 our_labyrinth.push_back(new_cell);
-                time += (A + B * i);
+                time += A;
                 return Bypass(new_cell, time, direction, A, B);
             }
         } else {
@@ -148,7 +148,7 @@ int Bypass (Cell now_cell, long long time, int direction, int A, int B) {
         cout << 2 << '\n';
         int a;
         std::cin >> a;
-        direction = (direction + 1) % 4;
+        time += B;
     }
 }
 
